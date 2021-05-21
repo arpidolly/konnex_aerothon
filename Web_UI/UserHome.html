@@ -9,6 +9,8 @@
     <title>Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Home.css" media="screen">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -20,6 +22,20 @@
 	function openwidgets() {
   //document.getElementById("myForm").style.display = "block";
   const targetDiv = document.getElementById("myForm");
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+  }
+
+};
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+};
+function openchatwindow() {
+  const targetDiv = document.getElementById("chatwindow");
   if (targetDiv.style.display !== "none") {
     targetDiv.style.display = "none";
   } else {
@@ -68,7 +84,7 @@ background-color: #ffffff !important
 </defs></svg>
             </a>
           </div>
-          <div class="u-custom-menu u-nav-container">
+          <div class="u-custom-menu u-nav-container" onclick="myFunction()">
             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
 			<li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="UserHome.html" style="padding: 10px;">Home</a>
 </li>
@@ -78,12 +94,18 @@ background-color: #ffffff !important
 
 
 </li>-->
-<li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Collective Announcements.html" style="padding: 10px;"><i class="material-icons" style="font-size:20px">notifications</i></a>
+<li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"  style="padding: 10px;"><i class="fas fa-bell"></i>
+					  <span class="badge">0</span> </a>
+					  
 </li>
+
+
 <li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home.Html" style="padding: 10px;"><i class="fa fa-sign-out fa-5x" style="font-size:20px"></i></a>
 </li>
 </ul>
           </div>
+		  <div id="snackbar">Currently no notifications..</div>
+
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
@@ -187,6 +209,7 @@ application better.</p>
       <p class="u-text">
         <span>created by @Root Admin</span>
       </p>
+	  <!--
 	  <div>
 	  <button class="material-icons floatbtn" style="font-size:30px" onclick="openwidgets()" id="help" >support_agent
 	  	  		    <span class="tooltiptext1">SUPPORT</span>
@@ -194,11 +217,11 @@ application better.</p>
 
 
 	  </div>
-	  
+	 
 	  <div class="chat-popup" id="myForm">
 	    
 		 <ul>
-	  	  <button class="material-icons display" style="font-size:30px" onclick="" >contact_support
+	  	  <button class="material-icons display" style="font-size:30px" onclick="openchatwindow()" >contact_support
 		    <span class="tooltiptext">CHAT WITH US</span>
 </button>
 
@@ -219,8 +242,47 @@ application better.</p>
 
   
 
-</div>
-	  
+</div>-->
+	<div class="fab-container">
+		<div class="fab fab-icon-holder">
+			<i class="fas fa-question"></i>
+		</div>
+
+		<ul class="fab-options">
+			<li>
+				<span class="fab-label">Report a bug</span>
+				<div onclick="location.href='Bug Reporting Window.html'"  class="fab-icon-holder">
+					<i class="fas fa-bug"></i>
+				</div>
+			</li>
+			<!--
+			<li>
+				<span class="fab-label">Video Tutorials</span>
+				<div class="fab-icon-holder">
+					<i class="fas fa-video"></i>
+				</div>
+			</li>
+			-->
+			<li>
+				<span class="fab-label">Support</span>
+				<div class="fab-icon-holder">
+					<i class="fas fa-comments"></i>
+				</div>
+			</li>
+		<li>
+				<span class="fab-label">Feedback</span>
+				<div onclick="location.href='FeedBack Form.html'" class="fab-icon-holder">
+					<i class="fas fa-comment-alt"></i>
+				</div>
+			</li>
+			<li>
+			<span class="fab-label">Application Improvements</span>
+				<div onclick="location.href='Application Improvement & Co-Creation.html'" class="fab-icon-holder">
+					<i class="fa fa-exclamation-circle"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
 
 	  </section>
        <!--<h2 class="u-text u-text-grey-70 u-text-2">Follow Us</h2>
