@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="Page-4.css" media="screen">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -30,6 +31,20 @@
 	function openwidgets() {
   //document.getElementById("myForm").style.display = "block";
   const targetDiv = document.getElementById("myForm");
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+  }
+
+};
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+};
+function openchatwindow() {
+  const targetDiv = document.getElementById("chatwindow");
   if (targetDiv.style.display !== "none") {
     targetDiv.style.display = "none";
   } else {
@@ -60,19 +75,22 @@
 </defs></svg>
             </a>
           </div>
-          <div class="u-custom-menu u-nav-container">
+          <div class="u-custom-menu u-nav-container" onclick="myFunction()">
             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="UserHome.html" style="padding: 10px;">Home</a>
 </li><!--
 <li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Application Improvement & Co-Creation.html" style="padding: 10px;">Application Improvements &amp; co-creation</a>
 </li>
 <li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Bug Reporting Window.html" style="padding: 10px;">Bug Reporting window</a>
-</li>
-<li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Collective Announcements.html" style="padding: 10px;"><i class="material-icons" style="font-size:20px">notifications</i></a>
 </li>-->
+<li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base"  style="padding: 10px;"><i class="fas fa-bell"></i>
+					  <span class="badge">0</span> </a>
+					  
+</li>
 <li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home.Html" style="padding: 10px;"><i class="fa fa-sign-out fa-5x" style="font-size:20px"></i></a>
 </li>
 		  </ul>
 		  </div>
+		   <div id="snackbar">Currently no notifications..</div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
@@ -130,39 +148,47 @@ such platform can create an innovative solution or application (we named KONNEX
       <p class="u-text">
         <span>created by @Root Admin</span>
       </p>
-	  <div>
-	  <button class="material-icons floatbtn" style="font-size:30px" onclick="openwidgets()" id="help" >support_agent
-	  	  		    <span class="tooltiptext1">SUPPORT</span>
-</button>
+	 
+	  	<div class="fab-container">
+		<div class="fab fab-icon-holder">
+			<i class="fas fa-question"></i>
+		</div>
 
-
-	  </div>
-	  
-	  <div class="chat-popup" id="myForm">
-	    
-		 <ul>
-	  	  <button class="material-icons display" style="font-size:30px" onclick="" >contact_support
-		    <span class="tooltiptext">CHAT WITH US</span>
-</button>
-
-
-	  
-	  
-	  	  <button class="material-icons display" style="font-size:30px" onclick="location.href='Collective Announcements.html'">announcement
-		    <span class="tooltiptext">ANNOUNCEMENTS</span>
-</button>
-
-	  
-	  	  <button class="material-icons display" style="font-size:30px" onclick="location.href='Bug Reporting Window.html'" >bug_report
-		    <span class="tooltiptext">BUGS</span>
-</button>
-
-	  
-	  </ul>
-
-  
-
-</div>
+		<ul class="fab-options">
+			<li>
+				<span class="fab-label">Report a bug</span>
+				<div onclick="location.href='Bug Reporting Window.html'"  class="fab-icon-holder">
+					<i class="fas fa-bug"></i>
+				</div>
+			</li>
+			<!--
+			<li>
+				<span class="fab-label">Video Tutorials</span>
+				<div class="fab-icon-holder">
+					<i class="fas fa-video"></i>
+				</div>
+			</li>
+			-->
+			<li>
+				<span class="fab-label">Support</span>
+				<div class="fab-icon-holder">
+					<i class="fas fa-comments"></i>
+				</div>
+			</li>
+			<li>
+				<span class="fab-label">Feedback</span>
+				<div onclick="location.href='FeedBack Form.html'" class="fab-icon-holder">
+					<i class="fas fa-comment-alt"></i>
+				</div>
+			</li>
+			<li>
+			<span class="fab-label">Application Improvements</span>
+				<div onclick="location.href='Application Improvement & Co-Creation.html'" class="fab-icon-holder">
+					<i class="fa fa-exclamation-circle"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
 	  
 
 	  </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; display: block;" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base u-spacing-15" data-href="#">
