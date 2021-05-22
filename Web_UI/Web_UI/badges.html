@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+    $('#games').click(function(){ 
+        if(!$('#iframe').length) {
+                $('#iframeHolder').html('<iframe id="iframe" src="http://www.freeonlinegames.com/embed/149231" width="640" height="960" frameborder="no" scrolling="no"></iframe>');
+        }
+    });   
+});
+</script>
+
+<div class="container">
+  <h2>Profile:</h2>
+  <h2>Jayanth</h2>
+  <button type="button" class="btn btn-primary"><span class="badge">First Login</span></button>
+  <button type="button" class="btn btn-primary"><span class="badge">Regular</span></button> 
+  <button type="button" class="btn btn-success"><span class="badge">Consistent</span></button> 
+    <button type="button" id ="games" class="btn btn-success"><span class="badge">Games</span></button> 
+
+  
+         
+</div>
+<div id="iframeHolder"></div>
+
+</body>
+</html>
