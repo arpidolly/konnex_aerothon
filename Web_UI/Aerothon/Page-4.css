@@ -1,0 +1,417 @@
+.u-section-1 {
+  background-image: url("images/yyy.jpg");
+  background-position: 50% 50%;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.menu-items{
+	position: absolute;
+	bottom: calc(100% +10px);
+	right: 10px;
+	margin:0;
+	padding:5px 0;
+	min-width:150px;
+	background: #eeeeee;
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.25);
+	
+	
+}
+
+
+.display .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 10;
+}
+.floatbtn .tooltiptext1 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 10;
+}
+.floatbtn
+	{
+	width:60px;
+	height:60px;
+	background:#478ac9;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	border-radius:30%;
+	color:#ffffff
+	font-size:40px;
+	position:fixed;
+	right:40px;
+	bottom:20px;
+	left:1380px;
+	
+}
+
+.floatbtn:hover .tooltiptext1 {
+  visibility: visible;
+
+}
+.display:hover .tooltiptext {
+  visibility: visible;
+}
+.display{
+	width:50px;
+	height:50px;
+	background:#c203fc;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-decoration:none;
+	border-radius:50%;
+	color:#ffffff;
+	font-size:40px;
+	right:50px;
+	bottom:20px;
+	left:1380px;
+	
+	
+}
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+.fab-container {
+	position: fixed;
+	bottom: 50px;
+	right: 80px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.fab-icon-holder {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #016fb9;
+
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.fab-icon-holder:hover{
+	opacity: 0.8;
+}
+
+.fab-icon-holder i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+	font-size: 25px;
+	color: #ffffff;
+}
+
+.fab {
+	width: 50px;
+	height: 50px;
+	background: #d23f31;
+	
+}
+
+.fab-options {
+	list-style-type: none;
+	margin: 0;
+
+	position: absolute;
+	bottom: 70px;
+	right: 0;
+
+	opacity: 0;
+
+	transition: all 0.3s ease;
+	transform: scale(0);
+	transform-origin: 85% bottom;
+}
+
+.fab:hover + .fab-options, .fab-options:hover {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.fab-options li {
+	display: flex;
+	justify-content: flex-end;
+	padding: 5px;
+}
+
+.fab-label {
+	padding: 2px 5px;
+	align-self: center;
+	user-select: none;
+	white-space: nowrap;
+	border-radius: 3px;
+	font-size: 16px;
+	background: #666666;
+	color: #ffffff;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+	margin-right: 10px;
+}
+
+
+
+
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.u-section-1 .u-sheet-1 {
+  min-height: 622px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  width: 1171px;
+  margin: 1px -31px 60px auto;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 561px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 40px 25px;
+}
+
+.u-section-1 .u-text-1 {
+  letter-spacing: normal;
+  font-family: Barlow;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: none;
+  margin: 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 20px 0 0;
+}
+
+.u-section-1 .u-image-1 {
+  min-height: 561px;
+  background-image: url("images/istockphoto-1206796363-612x612.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px 0 30px 40px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 377px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: 940px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 450px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 265px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: 720px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 345px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 498px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: 540px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 470px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 313px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 296px;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
